@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransBlack">#A6000000</color>
+    <color name="colorTransGrey">#D9BCB5B3</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorRed">#e24339</color>
+    <color name="colorFillCount">#f35652</color>
+    <color name="colorUnfillCount">#5e5d5b</color>
+    <color name="colorBlue">#2480f4</color>
+</resources>

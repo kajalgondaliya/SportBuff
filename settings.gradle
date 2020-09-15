@@ -1,0 +1,4 @@
+include ':slidetounlock'
+include ':VideoOverlayLib'
+include ':app'
+rootProject.name = "SportBuffApp"
