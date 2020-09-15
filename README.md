@@ -32,4 +32,4 @@ VideoBuff Lib instruction :
 
 For more information, Please Check Example Project (SportBuff App)
 
-Download Test APK [SportBuff.apk](https://github.com/kajalgondaliya/SportBuff/blob/master/APK/Sport%20Buff%20App.apk)
+Download Test APK [SportBuff.apk](https://github.com/kajalgondaliya/SportBuff/blob/master/APK/Sport%20Buff%20App.apk?raw=true)
