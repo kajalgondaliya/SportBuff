@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/buff_layout_start"
+    android:background="@null">
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/buff_size_tiny"
+        android:layout_marginTop="@dimen/buff_size_tiny"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/authorInfoContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/buff_author_layout_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/authorImage"
+                android:layout_width="@dimen/buff_author_image_width"
+                android:layout_height="@dimen/buff_author_image_height"
+                android:layout_marginEnd="@dimen/buff_size_small"
+                android:layout_marginStart="@dimen/buff_size_tiny"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/buff_white"
+                />
+
+            <TextView
+                android:id="@+id/authorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/buff_text_dark"
+                android:textStyle="bold"
+               />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/closeBuffIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/buff_ic_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/questionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/buff_size_tiny"
+        android:background="@drawable/buff_question_layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/buff_size_regular"
+            android:layout_toStartOf="@+id/circularCountDown"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+           />
+
+        <douglasspgyn.com.github.circularcountdown.CircularCountdown
+            android:id="@+id/circularCountDown"
+            android:layout_width="@dimen/buff_circular_countdown_size"
+            android:layout_height="@dimen/buff_circular_countdown_size"
+            android:layout_alignParentEnd="true"
+            app:countdownBackgroundColor="@color/buff_countdown_timer_background"
+            app:countdownForegroundColor="@color/buff_countdown_timer_foreground"
+            app:countdownTextColor="@android:color/white"
+            app:countdownTextSize="@dimen/buff_countdown_timer_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/answersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/buff_answers_layout_margin_right"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical" />
+
+</LinearLayout>

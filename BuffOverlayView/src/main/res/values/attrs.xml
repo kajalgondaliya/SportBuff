@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BuffOverlay">
+        <attr name="buff_author_info_background" format="integer" />
+        <attr name="buff_author_info_text_color" format="color" />
+        <attr name="buff_close_icon" format="integer" />
+        <attr name="buff_question_background" format="integer" />
+        <attr name="buff_answer_row_background" format="integer" />
+        <attr name="buff_answer_row_text_color" format="color" />
+        <attr name="buff_selected_answer_row_background" format="integer" />
+        <attr name="buff_selected_answer_row_text_color" format="color" />
+    </declare-styleable>
+</resources>

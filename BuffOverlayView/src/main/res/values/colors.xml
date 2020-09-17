@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="buff_white">#ffffff</color>
+    <color name="buff_text_dark">#333333</color>
+    <color name="buff_author_layout_bg_color">#AAFFFFFF</color>
+    <color name="buff_question_layout_bg_color">#BF111111</color>
+    <color name="buff_countdown_timer_background">#666666</color>
+    <color name="buff_countdown_timer_foreground">#ff5959</color>
+    <color name="buff_question_answer_layout_bg_color">#AAFFFFFF</color>
+    <color name="buff_selected_answer_layout_bg_color">#2480f4</color>
+</resources>

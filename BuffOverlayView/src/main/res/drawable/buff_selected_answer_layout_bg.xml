@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/buff_selected_answer_layout_bg_color" />
+
+    <corners android:radius="@dimen/buff_question_answer_layout_corner_radius" />
+
+    <padding
+        android:bottom="@dimen/buff_size_tiny"
+        android:left="@dimen/buff_size_tiny"
+        android:right="@dimen/buff_size_tiny"
+        android:top="@dimen/buff_size_tiny" />
+</shape>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buff_size_tiny">4dp</dimen>
+    <dimen name="buff_size_small">8dp</dimen>
+    <dimen name="buff_size_regular">12dp</dimen>
+    <dimen name="buff_size_medium">16dp</dimen>
+    <dimen name="buff_size_large">24dp</dimen>
+
+    <dimen name="buff_author_layout_corner_radius">24dp</dimen>
+    <dimen name="buff_question_layout_corner_radius">8dp</dimen>
+    <dimen name="buff_circular_countdown_size">32dp</dimen>
+    <dimen name="buff_countdown_timer_text_size">12sp</dimen>
+    <dimen name="buff_question_answer_layout_corner_radius">30dp</dimen>
+    <dimen name="buff_buffview_layout_margin">20dp</dimen>
+    <dimen name="buff_answer_row_margin_bottom">4dp</dimen>
+    <dimen name="buff_header_view_margin_bottom">35dp</dimen>
+    <dimen name="buff_author_image_width">28dp</dimen>
+    <dimen name="buff_author_image_height">28dp</dimen>
+    <dimen name="buff_answer_index_image_width">24dp</dimen>
+    <dimen name="buff_answer_index_image_height">24dp</dimen>
+    <dimen name="buff_answers_layout_margin_right">64dp</dimen>
+    <dimen name="buff_layout_start">20dp</dimen>
+</resources>

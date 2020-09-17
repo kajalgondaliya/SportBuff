@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buff_question_answer_layout_bg"
+    app:layoutDescription="@xml/buff_answer_motion_scene"
+    android:gravity="center_vertical"
+    tools:showPaths="true">
+
+    <TextView
+        android:id="@+id/answerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingEnd="@dimen/buff_size_medium"
+        android:paddingRight="@dimen/buff_size_medium"
+        android:layout_marginStart="@dimen/buff_size_small"
+        android:textColor="@color/buff_text_dark"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/answerImage"
+        app:layout_constraintBottom_toBottomOf="@id/answerImage"
+        app:layout_constraintStart_toEndOf="@+id/answerImage"
+        tools:text="Yes he will" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/answerImage"
+        android:layout_width="@dimen/buff_answer_index_image_width"
+        android:layout_height="@dimen/buff_answer_index_image_width"
+        android:layout_marginStart="@dimen/buff_size_tiny"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

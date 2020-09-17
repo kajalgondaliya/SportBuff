@@ -1,63 +1,56 @@
 package com.tecocraft.sportbuffapp
 
-import com.nhaarman.mockito_kotlin.argumentCaptor
-import com.nhaarman.mockito_kotlin.eq
-import com.nhaarman.mockito_kotlin.mock
-import com.nhaarman.mockito_kotlin.verify
 
-import com.tecocraft.sportbuffapp.model.buffResponce.BuffResponce
-import com.tecocraft.sportbuffapp.presenterimpl.BuffPresenterImpl
-import com.tecocraft.sportbuffapp.presenters.BuffPresenter
-import com.tecocraft.sportbuffapp.repositories.BuffRepository
-import com.tecocraft.sportbuffapp.repositorycallbacks.BuffRepositoryCallback
-import com.tecocraft.sportbuffapp.view.Buffview
-
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.Observer
+import com.tecocraft.sportbuffapp.common.VIDEO_URL
+import com.tecocraft.sportbuffapp.ui.MainActivityViewModel
 import org.junit.Assert
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers
+import org.mockito.Mock
+import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
-
+/**
+ * Created by Akshay Jariwala
+ */
 @RunWith(MockitoJUnitRunner::class)
 class MainActivityBuffTest {
-    lateinit var repository: BuffRepository
-    lateinit var view: Buffview
-    lateinit var presenter: BuffPresenter
-    lateinit var model: BuffResponce
+
+    @Rule
+    @JvmField
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    @Mock
+    lateinit var observer: Observer<String>
+
+    private lateinit var mainActivityViewModel: MainActivityViewModel
 
     @Before
     fun setUp() {
-        repository = mock()
-        view = mock()
-        presenter = BuffPresenterImpl()
-        model = mock()
+        mainActivityViewModel = MainActivityViewModel()
     }
 
     @Test
-    fun checkBuffApiSuccess() {
-        presenter.buffField(repository, view, 1)
-        verify(view).showLoader()
-        argumentCaptor<BuffRepositoryCallback>().apply {
-            verify(repository).getBuffData(capture(), ArgumentMatchers.anyInt())
-            firstValue.onDataSuccess(model)
-        }
-        verify(view).onDataSuccess(model)
-
+    fun `videoUrl has an observer`() {
+        mainActivityViewModel.videoUrl.observeForever(observer)
+        assert(mainActivityViewModel.videoUrl.hasObservers())
     }
 
     @Test
-    fun checkBuffApiFailure() {
-        presenter.buffField(repository, view,0)
-        verify(view).showLoader()
-        argumentCaptor<BuffRepositoryCallback>().apply {
-            verify(repository).getBuffData(
-                capture(),
-                ArgumentMatchers.anyInt()
-            )
-            firstValue.onDataFailure("Something went wrong")
-        }
-        verify(view).onDataFailure("Something went wrong")
+    fun `fetchVideoUrl sets correct value for videoUrl`() {
+        mainActivityViewModel.fetchVideoUrl()
+        assert(mainActivityViewModel.videoUrl.value == VIDEO_URL)
+    }
+
+    @Test
+    fun `fetchVideoUrl should trigger the observer for videoUrl`() {
+        mainActivityViewModel.videoUrl.observeForever(observer)
+        mainActivityViewModel.fetchVideoUrl()
+        Mockito.verify(observer).onChanged(VIDEO_URL)
     }
 
 

@@ -1,0 +1,10 @@
+<resources>
+    <string name="buff_app_name">Buffup</string>
+    <string name="buff_missing_initialization_exception">Looks like Buffup hasn\'t been initialized or the Auth Key is invalid</string>
+    <string name="buff_unsupported_activity_viewgroup_exception">Parent view must be RelativeLayout to support BuffView overlaying</string>
+
+    <string name="buff_invalid_author_data">Unable to display Buff, Author data is invalid</string>
+    <string name="buff_invalid_question_data">Unable to display Buff, Question data is invalid</string>
+    <string name="buff_invalid_answers_data">Unable to display Buff, Answers data is invalid</string>
+    <string name="buff_invalid_time_to_show_data">Unable to display Buff, Time to show is invalid</string>
+</resources>

@@ -1,3 +1,5 @@
+include ':BuffOverlayView'
+include ':VideoOverlayLibNew'
 include ':slidetounlock'
 include ':VideoOverlayLib'
 include ':app'

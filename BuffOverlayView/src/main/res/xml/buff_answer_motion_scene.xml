@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        android:id="@+id/answerImageTransition"
+        motion:duration="300">
+        <OnSwipe
+            motion:touchAnchorId="@+id/answerImage"
+            motion:touchAnchorSide="right"
+            motion:dragDirection="dragRight" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/answerImage"
+            android:layout_width="@dimen/buff_answer_index_image_width"
+            android:layout_height="@dimen/buff_answer_index_image_width"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/answerImage"
+            android:layout_width="@dimen/buff_answer_index_image_width"
+            android:layout_height="@dimen/buff_answer_index_image_width"
+            android:layout_marginEnd="@dimen/buff_size_tiny"
+            android:layout_marginStart="@dimen/buff_size_tiny"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/answerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/buff_size_small"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+
+    </ConstraintSet>
+
+</MotionScene>
